@@ -51,9 +51,6 @@ reset-password
 
 
 
-ForgotForm.tsx
-
-
 ResetPasswordForm.tsx
 SuccessForm.tsx
 
