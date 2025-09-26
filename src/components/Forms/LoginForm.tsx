@@ -105,7 +105,7 @@ export default function LoginForm({
         />
         <button
           type="button"
-          className="absolute right-3 top-[38px] text-gray-500"
+          className="absolute right-3 top-1/3 text-gray-500"
           onClick={() => setShowPassword(prev => !prev)}
         >
           {showPassword ? <HiOutlineEyeOff size={20} /> : <HiOutlineEye size={20} />}
