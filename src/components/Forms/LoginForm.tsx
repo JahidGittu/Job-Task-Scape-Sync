@@ -5,6 +5,7 @@ import Button from "../ui/button";
 import Divider from "../ui/divider";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi";
+import GoogleLoginButton from "../ui/GoogleLogin";
 
 type Props = {
   email?: string;
@@ -86,9 +87,6 @@ export default function LoginForm({
     }
   };
 
-  const handleGoogleLogin = () => {
-    alert("Google login clicked!");
-  };
 
   return (
     <div className="space-y-6 bg-white p-8 rounded-xl shadow-xl w-full max-w-lg flex flex-col">
@@ -151,14 +149,7 @@ export default function LoginForm({
 
       <Divider />
 
-      <button
-        type="button"
-        className="bg-gray-200 hover:bg-gray-300/80 transition-transform duration-300 w-full flex items-center justify-center gap-5 border rounded-lg p-3"
-        onClick={handleGoogleLogin}
-      >
-        <FcGoogle />
-        Continue with Google
-      </button>
+     <GoogleLoginButton/>
 
       <p className="text-center text-sm text-gray-600 mt-2">
         Don't have an account?{" "}

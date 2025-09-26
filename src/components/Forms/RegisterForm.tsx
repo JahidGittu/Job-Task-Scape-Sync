@@ -6,6 +6,7 @@ import Checkbox from "../ui/checkbox";
 import Button from "../ui/button";
 import Divider from "../ui/divider";
 import { ArrowBigLeft } from "lucide-react";
+import GoogleLoginButton from "../ui/GoogleLogin";
 
 type Props = {
   role: "client" | "businessOwner";
@@ -74,7 +75,10 @@ export default function RegisterForm({ role, onRegistered, onBack, onGoLogin }: 
       <div className="flex flex-col gap-4 mt-4">
         <Button type="submit" className="w-full bg-green-600 hover:bg-green-700" disabled={loading}>{loading ? "Creating..." : "Create Account"}</Button>
         <Divider />
-        <Button type="button" className="w-full bg-blue-600 hover:bg-blue-700">Continue with Google</Button>
+       
+       <GoogleLoginButton/>
+       
+       
         <p className="text-center text-sm text-gray-600 mt-4">
           Already have an account?{" "}
           <span className="text-blue-600 underline cursor-pointer" onClick={() => onGoLogin && onGoLogin()}>Login</span>
