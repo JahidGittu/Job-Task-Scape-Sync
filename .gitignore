@@ -48,12 +48,11 @@ next-env.d.ts
 
 
 reset-password
-send-otp 
-verify-otp 
+
 
 
 ForgotForm.tsx
-OTPForm.tsx
+
 
 ResetPasswordForm.tsx
 SuccessForm.tsx
