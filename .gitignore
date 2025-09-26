@@ -47,8 +47,13 @@ models
 types
 utils
 
-auth
-api
+
+login
+register
+reset-password
+send-otp 
+verify-otp 
+role
 
 Forms
 
