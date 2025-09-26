@@ -51,7 +51,6 @@ auth
 api
 
 Forms
-Hero.tsx
 FAQ.tsx
 Features.tsx
 Footer.tsx
