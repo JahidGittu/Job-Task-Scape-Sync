@@ -48,12 +48,11 @@ types
 utils
 
 
-login
 
 reset-password
 send-otp 
 verify-otp 
-role
+
 
 Forms
 
