@@ -42,10 +42,8 @@ next-env.d.ts
 
 
 # my section
-lib
-models
-types
-utils
+
+
 
 
 
