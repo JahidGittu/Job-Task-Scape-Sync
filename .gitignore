@@ -49,7 +49,7 @@ utils
 
 
 login
-register
+
 reset-password
 send-otp 
 verify-otp 
