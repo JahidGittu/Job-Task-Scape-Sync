@@ -47,11 +47,6 @@ next-env.d.ts
 
 
 
-reset-password
-
-
-
-ResetPasswordForm.tsx
 SuccessForm.tsx
 
 
