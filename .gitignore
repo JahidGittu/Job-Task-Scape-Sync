@@ -54,7 +54,11 @@ send-otp
 verify-otp 
 
 
-Forms
+ForgotForm.tsx
+OTPForm.tsx
+
+ResetPasswordForm.tsx
+SuccessForm.tsx
 
 
 ui
