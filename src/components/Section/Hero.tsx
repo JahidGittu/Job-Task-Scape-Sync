@@ -14,8 +14,8 @@ const Hero = () => {
   return (
     <section className="relative">
       {/* Background Effect */}
-      <div className="absolute -left-3/6 -top-3/6">
-        <Image src={sideEffectImg} alt="Hero Background" priority />
+      <div className="absolute -left-1/6 -top-3/6">
+        <Image src={sideEffectImg} alt="Hero Background" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -75,7 +75,7 @@ const Hero = () => {
             <div className="absolute w-full -bottom-2">
               <Image src={heroImgBtmGlow} alt="Bottom Glow" />
             </div>
-            <div className="absolute -top-12 -right-16 z-0 opacity-70">
+            <div className="absolute -top-12 -right-16 z-0">
               <Image src={sideEffectImg2} alt="Side Effect" />
             </div>
           </div>
