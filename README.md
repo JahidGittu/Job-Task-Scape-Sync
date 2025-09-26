@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ScapeSync Authentication & Password Reset Project
 
-## Getting Started
+This is a **Next.js 15+ project** with **TypeScript**, **MongoDB**, and **TailwindCSS**.  
+It implements **user authentication**, **email verification via OTP**, **forgot password**, and **password reset** functionalities with a multi-step form UI.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- User registration with email & password
+- Email verification via 6-digit OTP
+- OTP resend functionality
+- Forgot password workflow
+- Reset password using OTP
+- Real-time validation for passwords & OTP
+- Responsive and modern UI with TailwindCSS
+- Secure password hashing using `bcryptjs`
+
+---
+
+## Tech Stack
+
+- **Frontend:** Next.js 15+ (App Router), React, TailwindCSS, TypeScript
+- **Backend:** Next.js API routes
+- **Database:** MongoDB (Atlas or local)
+- **Libraries:** 
+  - `bcryptjs` → Password hashing
+  - `framer-motion` → Optional animations for OTP form
+  - `lucide-react` → Icons
+  - `nodemailer` or any SMTP utility → Sending OTP emails
+
+---
+
+## Project Structure
+
+```
+├── app/
+│   ├── api/
+│   │   ├── auth/
+│   │   │   └── [...nextauth]/
+│   │   │       └── route.ts
+│   │   ├── login/
+│   │   │   └── route.ts
+│   │   ├── register/
+│   │   │   └── route.ts
+│   │   ├── reset-password/
+│   │   │   └── route.ts
+│   │   ├── send-otp/
+│   │   │   └── route.ts
+│   │   └── verify-otp/
+│   │       └── route.ts
+│   ├── auth/
+│   │   ├── register/
+│   │   │   └── register.tsx
+│   │   ├── role/
+│   │   │   └── role.tsx
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── assets/
+│   ├── FooterImage/
+│   │   ├── FooterLogo.png
+│   │   └── Mask group.png
+│   ├── HeroImage/
+│   │   ├── AppleStore.png
+│   │   ├── HeroBgFlower.png
+│   │   ├── HeroImgBtnGlow.png
+│   │   ├── HeroPhone.png
+│   │   ├── PlayStore.png
+│   │   ├── SideEffectIMG.png
+│   │   ├── SideEffectIMG2.png
+│   │   └── UnderlineStrockIMG.png
+│   ├── NavbarImage/
+│   │   └── NavLogo.png
+│   ├── ProductShowcaseImage/
+│   │   ├── feature-phone-1.png.png
+│   │   ├── feature-phone-2.png.png
+│   │   └── feature-phone-3.png.png
+│   └── Role/
+│       ├── business.png
+│       └── client.png
+├── components/
+│   ├── Forms/
+│   │   ├── ForgotForm.tsx
+│   │   ├── LoginForm.tsx
+│   │   ├── OTPForm.tsx
+│   │   ├── RegisterForm.tsx
+│   │   ├── ResetPasswordForm.tsx
+│   │   ├── RoleForm.tsx
+│   │   └── SuccessForm.tsx
+│   ├── Section/
+│   │   ├── FAQ.tsx
+│   │   ├── Features.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── LogoHeader.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── ProductShowcase.tsx
+│   │   └── Testimonials.tsx
+│   └── ui/
+│       ├── GoogleLogin.tsx
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── checkbox.tsx
+│       ├── divider.tsx
+│       └── input.tsx
+├── lib/
+│   └── mongodb.ts
+├── models/
+│   └── User.ts
+├── theme/
+│   ├── ThemeProvider.tsx
+│   └── ThemeSwitch.tsx
+├── types/
+│   ├── canvas-confetti.ts
+│   └── next-auth.ts
+└── utils/
+    └── sendOTP.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+git clone https://github.com/JahidGittu/Job-Task-Scape-Sync.git
+cd Job-Task-Scape-Sync
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm install
+# or
+yarn install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Usage
 
-To learn more about Next.js, take a look at the following resources:
+Navigate to the registration page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Register using your email and password.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Verify your account using the OTP sent to your email.
 
-## Deploy on Vercel
+If you forget your password, use the forgot password flow to reset it.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Log in using verified credentials.
